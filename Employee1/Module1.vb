@@ -5,7 +5,7 @@ Module Module1
     Public Sub DbConnect()
 
 
-        Dim dbname As String = "it2a"
+        Dim dbname As String = "it2ab"
         Dim username As String = "root"
         Dim password As String = "admin" 'my sql server pwd'
         Dim server As String = "127.0.0.1" 'pc ipadd'

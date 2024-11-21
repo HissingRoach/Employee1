@@ -1,5 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports Module1
+Imports CrystalDecisions.CrystalReports.Engine
+Imports CrystalDecisions.CrystalReports.Shared
+
 
 Public Class Form1
 
@@ -34,7 +37,7 @@ Public Class Form1
     End Sub
 
     Public Sub DbConnect()
-        Dim dbname As String = "it2a"
+        Dim dbname As String = "it2ab"
         Dim username As String = "root"
         Dim password As String = "admin"
         Dim server As String = "127.0.0.1"
@@ -56,6 +59,17 @@ Public Class Form1
 
         Form2.Show()
         Me.Hide() 'hide form 2
+
+    End Sub
+
+    Private Sub btnprint_Click(sender As Object, e As EventArgs) Handles btnprint.Click
+        Form3.Show()
+        Dim report As New ReportDocument
+        'load crystal report
+
+        report.Load("C:\Users\SANDBOX-09\source\repos\Employee1\Employee1\UserList.rpt")
+        Form3.CrystalReportViewer1.ReportSource = report
+        Form3.CrystalReportViewer1.Refresh()
 
     End Sub
 End Class

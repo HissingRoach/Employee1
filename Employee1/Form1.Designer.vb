@@ -26,6 +26,7 @@ Partial Class Form1
         Me.btnload = New System.Windows.Forms.Button()
         Me.btnclose = New System.Windows.Forms.Button()
         Me.datarecord = New System.Windows.Forms.DataGridView()
+        Me.btnprint = New System.Windows.Forms.Button()
         CType(Me.datarecord, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -42,7 +43,7 @@ Partial Class Form1
         'btnload
         '
         Me.btnload.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnload.Location = New System.Drawing.Point(71, 142)
+        Me.btnload.Location = New System.Drawing.Point(71, 197)
         Me.btnload.Name = "btnload"
         Me.btnload.Size = New System.Drawing.Size(75, 52)
         Me.btnload.TabIndex = 1
@@ -52,7 +53,7 @@ Partial Class Form1
         'btnclose
         '
         Me.btnclose.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnclose.Location = New System.Drawing.Point(71, 223)
+        Me.btnclose.Location = New System.Drawing.Point(71, 286)
         Me.btnclose.Name = "btnclose"
         Me.btnclose.Size = New System.Drawing.Size(75, 23)
         Me.btnclose.TabIndex = 2
@@ -67,11 +68,22 @@ Partial Class Form1
         Me.datarecord.Size = New System.Drawing.Size(373, 238)
         Me.datarecord.TabIndex = 3
         '
+        'btnprint
+        '
+        Me.btnprint.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnprint.Location = New System.Drawing.Point(71, 145)
+        Me.btnprint.Name = "btnprint"
+        Me.btnprint.Size = New System.Drawing.Size(88, 35)
+        Me.btnprint.TabIndex = 4
+        Me.btnprint.Text = "Print User"
+        Me.btnprint.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnprint)
         Me.Controls.Add(Me.datarecord)
         Me.Controls.Add(Me.btnclose)
         Me.Controls.Add(Me.btnload)
@@ -88,4 +100,5 @@ Partial Class Form1
     Friend WithEvents btnload As Button
     Friend WithEvents btnclose As Button
     Friend WithEvents datarecord As DataGridView
+    Friend WithEvents btnprint As Button
 End Class
